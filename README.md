@@ -17,22 +17,27 @@
 <!-- start outputs -->
 <!-- end outputs -->
 <!-- start examples -->
-### Example usage
-```yaml
-on: [push]
+### Example usage to release on PR merge to main with branch protection enabled
 
+```yaml
+name: Semantic Release
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    paths:
+      - action.yaml
 jobs:
-  hello_world_job:
+  semantic-release:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: actions/hello-world-composite-action@v1
+      - uses: Unsupervisedcom/action-release-action@v1
         with:
-          who-to-greet: 'Mona the Octocat'
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+          token: ${{ secrets.DEPLOYER_CI_TOKEN }}
+          toggle-admins: true
 ```
 <!-- end examples -->
 <!-- start [.github/ghdocs/examples/] -->
