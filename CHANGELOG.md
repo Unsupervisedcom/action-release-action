@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Unsupervisedcom/action-release-action/compare/v1.0.0...v1.0.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* Enable branch protection bot now that it exists ([#3](https://github.com/Unsupervisedcom/action-release-action/issues/3)) ([b63d151](https://github.com/Unsupervisedcom/action-release-action/commit/b63d15129fbb9f74c1ca883fb294ecbf412e8604))
+
 # 1.0.0 (2021-12-20)
 
 
