@@ -9,9 +9,9 @@ inputs:
     required: false
     default: false
   release-config:
-    description: 'The release configuration to use for the release. Set this to `@Unsupervisedcom/release-config-javascript-actions` for javascript actions'
+    description: 'The release configuration to use for the release. Set this to `@unsupervised/release-config-javascript-actions` for javascript actions'
     required: false
-    default: '@Unsupervisedcom/release-config-actions'
+    default: '@unsupervised/release-config-composite-actions'
 runs:
   using: composite
   steps:
