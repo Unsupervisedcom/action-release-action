@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          # this makes the semantic-release git plugin push as the runner, which allows us to bypass branch protection
+          # this makes the semantic-release git plugin push as the automation user, which allows us to bypass branch protection
           token: ${{ secrets.DEPLOYER_CI_TOKEN }}
       - uses: Unsupervisedcom/action-release-action@main
         with:

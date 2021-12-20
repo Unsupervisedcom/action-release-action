@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: Unsupervisedcom/action-release-action@v1
         with:
-          token: ${{ secrets.GIT_RUNNER_TOKEN }}
+          token: ${{ secrets.DEPLOYER_CI_TOKEN }}
           toggle-admins: true
 ```
 <!-- end examples -->
