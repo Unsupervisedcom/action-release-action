@@ -12,6 +12,11 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - uses: Unsupervisedcom/action-release-action@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # this makes the semantic-release git plugin push as the runner, which allows us to bypass branch protection
+          token: ${{ secrets.DEPLOYER_CI_TOKEN }}
+      - uses: Unsupervisedcom/action-release-action@main
         with:
           token: ${{ secrets.DEPLOYER_CI_TOKEN }}
