@@ -16,28 +16,43 @@ Generates readme from `action.yaml` and Release the action using the given relea
 - uses: Unsupervisedcom/action-release-action@undefined
   with:
     # git token to use for the run
-    token: ""
+    token: ''
 
     # If true, this action will disable the `include administrators` setting in branch
     # protection for this branch, and re-enable it after release. Re-enabling is run
     # using always()
     # Default: false
-    toggle-admins: ""
+    toggle-admins: ''
 
     # The release configuration to use for the release. Set this to
     # `@unsupervised/release-config-javascript-actions` for javascript actions
     # Default: @unsupervised/release-config-composite-actions
-    release-config: ""
+    release-config: ''
+
+    # Additional semantic release plugins to install via npm that arent in the list of
+    # default plugins https://semantic-release.gitbook.io/semantic-release/usage/plugins#default-plugins. This should be a text block with each plugin on a new line
+    # Default: @semantic-release/exec
+conventional-changelog-conventionalcommits
+@semantic-release/changelog
+@semantic-release/git
+
+    extra-plugins: ''
 ```
 
 <!-- end usage -->
    <!-- start inputs -->
 
-| **Input**            | **Description**                                                                                                                                                                |                   **Default**                    | **Required** |
-| :------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------: | :----------: |
-| **`token`**          | git token to use for the run                                                                                                                                                   |                                                  |   **true**   |
-| **`toggle-admins`**  | If true, this action will disable the `include administrators` setting in branch protection for this branch, and re-enable it after release. Re-enabling is run using always() |                                                  |  **false**   |
-| **`release-config`** | The release configuration to use for the release. Set this to `@unsupervised/release-config-javascript-actions` for javascript actions                                         | `@unsupervised/release-config-composite-actions` |  **false**   |
+| **Input**            | **Description**                                                                                                                                                                                                                                 |                   **Default**                    | **Required** |
+| :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------: | :----------: |
+| **`token`**          | git token to use for the run                                                                                                                                                                                                                    |                                                  |   **true**   |
+| **`toggle-admins`**  | If true, this action will disable the `include administrators` setting in branch protection for this branch, and re-enable it after release. Re-enabling is run using always()                                                                  |                                                  |  **false**   |
+| **`release-config`** | The release configuration to use for the release. Set this to `@unsupervised/release-config-javascript-actions` for javascript actions                                                                                                          | `@unsupervised/release-config-composite-actions` |  **false**   |
+| **`extra-plugins`**  | Additional semantic release plugins to install via npm that arent in the list of default plugins https://semantic-release.gitbook.io/semantic-release/usage/plugins#default-plugins. This should be a text block with each plugin on a new line |             `@semantic-release/exec              |
+
+conventional-changelog-conventionalcommits
+@semantic-release/changelog
+@semantic-release/git
+` | **false** |
 
 <!-- end inputs -->
    <!-- start outputs -->

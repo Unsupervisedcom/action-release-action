@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/Unsupervisedcom/action-release-action/compare/v1.0.1...v1.0.2) (2022-01-31)
+
+
+### Bug Fixes
+
+* Add extra plugins configuration ([#4](https://github.com/Unsupervisedcom/action-release-action/issues/4)) ([46da2d3](https://github.com/Unsupervisedcom/action-release-action/commit/46da2d3d9c1760106f36724f4404a70c0f9140a2))
+* Specify semantic version when performing release ([#5](https://github.com/Unsupervisedcom/action-release-action/issues/5)) ([ffea982](https://github.com/Unsupervisedcom/action-release-action/commit/ffea982e47e6776291a2e2f28b4f8d95d9c0922b))
+
 ## [1.0.1](https://github.com/Unsupervisedcom/action-release-action/compare/v1.0.0...v1.0.1) (2021-12-20)
 
 
