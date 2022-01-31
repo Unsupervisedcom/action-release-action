@@ -33,6 +33,7 @@ runs:
       env:
         GITHUB_TOKEN: ${{ inputs.token }}
       with:
+        semantic_version: 18
         dry_run: true
         extends: ${{ inputs.release-config }}
         extra_plugins: |
@@ -55,6 +56,7 @@ runs:
       env:
         GITHUB_TOKEN: ${{ inputs.token }}
       with:
+        semantic_version: 18
         extends: ${{ inputs.release-config }}
         extra_plugins: |
           ${{ inputs.extra-plugins }}
