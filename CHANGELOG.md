@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Unsupervisedcom/action-release-action/compare/v1.0.2...v1.1.0) (2022-11-08)
+
+
+### Features
+
+* Main 122 update action release action to fix failures during release ([#6](https://github.com/Unsupervisedcom/action-release-action/issues/6)) ([77aad83](https://github.com/Unsupervisedcom/action-release-action/commit/77aad83faeb4e3e57594f8d443bd12810621a1cb))
+
 ## [1.0.2](https://github.com/Unsupervisedcom/action-release-action/compare/v1.0.1...v1.0.2) (2022-01-31)
 
 
